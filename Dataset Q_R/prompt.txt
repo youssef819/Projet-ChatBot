@@ -1,0 +1,8 @@
+J'aimerais que tu analyse le paragraphe fourni et
+que tu formules un et un seul couple de question/réponse
+qui permettrait de résumer le contenu  du paragraphe.
+J'aimerais que ce couple question/réponse prenne
+la forme (avec un retour à la ligne entre question et reponse):
+
+question: la question
+response: la réponse
