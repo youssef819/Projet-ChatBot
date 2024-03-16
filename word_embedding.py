@@ -36,8 +36,9 @@ def read_qa_data(json_file_path):
             # Extract the suggested question and answer
            
             for qa_item in qa_pair[1:]:
-                print(qa_item)
+                #print(qa_item)
                 parts = re.split(r'question:|response:', qa_item, flags=re.IGNORECASE)
+                print(parts)
                 if "question" in qa_item:
                 #if len(parts) >= 3:
                     question = clean_text(parts[1].strip())
@@ -56,10 +57,10 @@ def read_qa_data(json_file_path):
     
     return df
 
-json_file_path="Dataset Q_R/articles.json"
+json_file_path="sections.json"
 
 df=read_qa_data(json_file_path)
 
 output_dir = os.path.dirname(json_file_path)
-output_csv_path = os.path.join(output_dir, 'qa_data.csv')
+output_csv_path = os.path.join(output_dir, 'QA_data.csv')
 df.to_csv(output_csv_path, index=False)
